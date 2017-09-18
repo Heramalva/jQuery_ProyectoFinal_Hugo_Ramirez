@@ -1,53 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-	<script type="text/javascript" src="jquery-3.2.1.js"></script>
-	<script type="text/javascript" src="funciones.js"></script>
-	<title>Proyecto Final jQuery</title>
-	<meta content="text/html" charset="UTF-8">
+	<meta charset="utf-8" content="text/html" http-equiv="Content-Type">
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="js/funciones.js"></script>
+	<title>Registro de Estudiantes</title>
 </head>
 <body>
-	<h1 style="text-align: center;">Registro de Estudiantes</h1>
-	<form>
-		<label for="codigo">Código: </label><br>
-		<input type="text" name="codigo" id="codigo"><br>
-		<label for="codigo">Nombre: </label><br>
-		<input type="text" name="nombre" id="nombre"><br>
-		<label for="codigo">Nota: </label><br>
-		<input type="number" name="nota" id="nota"><br>
-	</form>
-	<HR>
-	<table>
-		<tr>
-			<td><button id="registrar">Registrar Estudiante</button></td>
-			<td><button id="listado">Mostrar Estudiantes</button></td>
-			<td><button id="promedio">Nota Promedio</button></td>
-			<td><button id="mayor">Estudiante con Nota Mayor</button></td>
-			<td><button id="menor">Estudiante con Nota Menor</button></td>
-		</tr>
-		<tr>
-			<td><p id="texto1"></p></td>
-			<td><p id="texto2"></p></td>
-			<td><p id="texto3"></p></td>
-			<td><p id="texto4"></p></td>
-		</tr>
-	</table>
-	<HR>
-	<table id="tabla">
-		<tr>
-			<th>Codigo</th>
-			<th>Nombre</th>
-			<th>Nota</th>
-			<th>Editar</th>
-			<th>Eliminar</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><button>Editar</button></td>
-			<td><button>Eliminar</button></td>
-		</tr>
-	</table>
+	<h1 id="titulo1">Registro de Estudiante</h1>
+		<label id="lmiCod">Codigo:</label>
+		<br>
+		<input type="text" id="miCod" name="cod">
+		<br>
+		<label id="lnom" for="miNom">Nombres:</label>
+		<br>
+		<input type="text" id="miNom" for="miNom" name="miNom">
+		<br>
+		<label id="lmiNota" for="miNota">Nota:</label>
+		<br>
+		<input type="text" id="miNota" required>
+		<br>
+		<br>
+		<input id="btn1" class="submit" type="submit" value="Registrar Alumnos">
+		<button id="btn2">Mostrar Promedio</button>
+		<button id="btn3">Mostrar Nota Mayor</button>
+		<button id="btn4">Mostrar Nota mas baja</button>
+		<br>
+		<br>
+	<div id="cont1">
+		<h2 id="h2">REGISTROS</h2>
+	</div>	
+	<div id="divTabla" align="center">		
+		<p id="p1"></p>
+ 		<br> 					
+	</div>
 </body>
 </html>

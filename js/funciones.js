@@ -50,7 +50,8 @@ function listarEstudiantes(){
 	}
 
 
-//Jquery
+
+
 $(document).ready(function(){		
 
 	localStorage.clear();
@@ -141,4 +142,5 @@ $(document).ready(function(){
 		alert("La nota minima es: " + Nmin);
 	}
 	});	
+	
 });

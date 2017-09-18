@@ -1,6 +1,11 @@
 
 $(document).ready(function(){
 
+	$("#registrar").click(function(){
+
+	});
+
+//temporal para pruebas, borrar despues
 	var estudiantes=[
 					{"codigo":"001","nombre":"Hugo Ramirez","nota":90},
 					{"codigo":"002","nombre":"Juan Lopez","nota":50},
@@ -13,34 +18,26 @@ $(document).ready(function(){
 					{"codigo":"009","nombre":"Ruth Carranza","nota":53},
 					{"codigo":"010","nombre":"Luis Cortez","nota":71}];
 
+//Funcion para Mostrar Estudiantes
 	$("#listado").click(function(){
 		var a="";
 		for(i=0;i<estudiantes.length;i++){
 			a+=estudiantes[i].codigo+" - "+estudiantes[i].nombre+" - "+estudiantes[i].nota+"<br>";
 		}
 		$("#texto1").html(a);
-	});
+	}); //borrar hasta aqui, y corregir los datos de las funciones de abajo
 
-});
-
-
-
-	
-
-//Funcion para mostrar el Listado de Estudiantes
-	
-
-//Funcion para calcular el Promedio
-	function promedio(){
+//funcion para Calcular el Promedio
+	$("#promedio").click(function(){
 		var b=0;
 		for(i=0;i<estudiantes.length;i++){
 			b+=(estudiantes[i].nota)/10;
 		}
-		document.getElementById("texto2").innerHTML="El Promedio es de <br>"+b.toFixed(2);
-	}
+		$("#texto2").html(b.toFixed(2));
+	});
 
-// Funcion para encontrar el numero mayor y mostrar el nombre
-	function mayor(){
+//funcion para encontrar el numero mayor y mostrar el nombre
+	$("#mayor").click(function(){
 		var mayor=estudiantes[0].nota;
 		var contador=1;
 		var c="";
@@ -51,11 +48,11 @@ $(document).ready(function(){
 			}
 			contador++;
 		}
-		document.getElementById("texto3").innerHTML="El Mejor Estudiante es: <br>"+c;
-	}
+		$("#texto3").html(c);
+	});
 
-//Funcion para encontrar el numero menor y mostrar el nombre
-	function menor(){
+//funcion para encontrar la nota menor
+	$("#menor").click(function(){
 		var menor=estudiantes[0].nota;
 		var contador=1;
 		var d="";
@@ -66,5 +63,7 @@ $(document).ready(function(){
 			}
 			contador++;
 		}
-		document.getElementById("texto4").innerHTML="El Peor Estudiante es: <br>"+d;
-	}
+		$("#texto4").html(d);
+	});
+
+});
